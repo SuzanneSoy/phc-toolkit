@@ -1,0 +1,98 @@
+cd /tmp; for m in '' phc-toolkit/untyped phc-toolkit/untyped/misc phc-toolkit/untyped/require-provide phc-toolkit/untyped/fixnum phc-toolkit/untyped/typed-rackunit phc-toolkit/untyped/typed-rackunit-extensions phc-toolkit/untyped/syntax-parse phc-toolkit/untyped/tmpl phc-toolkit/untyped/threading phc-toolkit/untyped/aliases phc-toolkit/untyped/sequence phc-toolkit/untyped/repeat-stx phc-toolkit/untyped/stx phc-toolkit/untyped/list phc-toolkit/untyped/values phc-toolkit/untyped/ids phc-toolkit/untyped/generate-indices phc-toolkit/untyped/set phc-toolkit/untyped/type-inference-helpers phc-toolkit/untyped/percent phc-toolkit/untyped/not-implemented-yet phc-toolkit/untyped/cond-let phc-toolkit/untyped/multiassoc-syntax phc-toolkit/untyped/tmpl-multiassoc-syntax phc-toolkit/untyped/logn-id phc-toolkit/untyped/compat phc-toolkit/untyped/eval-get-values phc-toolkit/untyped/meta-struct phc-toolkit/untyped/contract; do echo "#lang racket/base (require $m)" > perf.rkt; echo $(((0$(for i in `seq 5`; do rm -fr compiled; t="$((time raco make perf.rkt) 2>&1)"; echo -n '+'; echo "$t" | sed -e 's/raco make perf.rkt *//' -e 's/s .*$//' -e 's/^\([0-9]*\)$/\100/' -e 's/,\([0-9]\)$/\10/' -e 's/,\([0-9][0-9]\)/\1/'; done)) / 5)) $m; done
+ 36	none
+140	phc-toolkit/untyped
+ 83	phc-toolkit/untyped/misc
+ 83	phc-toolkit/untyped/require-provide
+ 81	phc-toolkit/untyped/fixnum
+126	phc-toolkit/untyped/typed-rackunit
+129	phc-toolkit/untyped/typed-rackunit-extensions
+ 84	phc-toolkit/untyped/syntax-parse
+ 81	phc-toolkit/untyped/tmpl
+ 81	phc-toolkit/untyped/threading
+ 82	phc-toolkit/untyped/aliases
+ 83	phc-toolkit/untyped/sequence
+ 81	phc-toolkit/untyped/repeat-stx
+ 83	phc-toolkit/untyped/stx
+ 81	phc-toolkit/untyped/list
+ 82	phc-toolkit/untyped/values
+103	phc-toolkit/untyped/ids
+ 82	phc-toolkit/untyped/generate-indices
+ 81	phc-toolkit/untyped/set
+112	phc-toolkit/untyped/type-inference-helpers
+ 84	phc-toolkit/untyped/percent
+ 82	phc-toolkit/untyped/not-implemented-yet
+ 82	phc-toolkit/untyped/cond-let
+ 83	phc-toolkit/untyped/multiassoc-syntax
+ 82	phc-toolkit/untyped/tmpl-multiassoc-syntax
+ 81	phc-toolkit/untyped/logn-id
+ 80	phc-toolkit/untyped/compat
+ 83	phc-toolkit/untyped/eval-get-values
+ 81	phc-toolkit/untyped/meta-struct
+ 83	phc-toolkit/untyped/contract
+
+
+cd /tmp; for m in '' phc-toolkit/untyped phc-toolkit/untyped/misc phc-toolkit/untyped/require-provide phc-toolkit/untyped/fixnum phc-toolkit/untyped/typed-rackunit phc-toolkit/untyped/typed-rackunit-extensions phc-toolkit/untyped/syntax-parse phc-toolkit/untyped/tmpl phc-toolkit/untyped/threading phc-toolkit/untyped/aliases phc-toolkit/untyped/sequence phc-toolkit/untyped/repeat-stx phc-toolkit/untyped/stx phc-toolkit/untyped/list phc-toolkit/untyped/values phc-toolkit/untyped/ids phc-toolkit/untyped/generate-indices phc-toolkit/untyped/set phc-toolkit/untyped/type-inference-helpers phc-toolkit/untyped/percent phc-toolkit/untyped/not-implemented-yet phc-toolkit/untyped/cond-let phc-toolkit/untyped/multiassoc-syntax phc-toolkit/untyped/tmpl-multiassoc-syntax phc-toolkit/untyped/logn-id phc-toolkit/untyped/compat phc-toolkit/untyped/eval-get-values phc-toolkit/untyped/meta-struct phc-toolkit/untyped/contract; do echo "#lang racket (require $m)" > perf.rkt; echo $(((0$(for i in `seq 5`; do rm -fr compiled; t="$((time raco make perf.rkt) 2>&1)"; echo -n '+'; echo "$t" | sed -e 's/raco make perf.rkt *//' -e 's/s .*$//' -e 's/^\([0-9]*\)$/\100/' -e 's/,\([0-9]\)$/\10/' -e 's/,\([0-9][0-9]\)/\1/'; done)) / 5)) $m; done
+55	none
+143	phc-toolkit/untyped
+82	phc-toolkit/untyped/misc
+83	phc-toolkit/untyped/require-provide
+82	phc-toolkit/untyped/fixnum
+126	phc-toolkit/untyped/typed-rackunit
+129	phc-toolkit/untyped/typed-rackunit-extensions
+83	phc-toolkit/untyped/syntax-parse
+82	phc-toolkit/untyped/tmpl
+83	phc-toolkit/untyped/threading
+82	phc-toolkit/untyped/aliases
+83	phc-toolkit/untyped/sequence
+83	phc-toolkit/untyped/repeat-stx
+84	phc-toolkit/untyped/stx
+82	phc-toolkit/untyped/list
+82	phc-toolkit/untyped/values
+103	phc-toolkit/untyped/ids
+82	phc-toolkit/untyped/generate-indices
+83	phc-toolkit/untyped/set
+110	phc-toolkit/untyped/type-inference-helpers
+82	phc-toolkit/untyped/percent
+83	phc-toolkit/untyped/not-implemented-yet
+82	phc-toolkit/untyped/cond-let
+84	phc-toolkit/untyped/multiassoc-syntax
+83	phc-toolkit/untyped/tmpl-multiassoc-syntax
+82	phc-toolkit/untyped/logn-id
+83	phc-toolkit/untyped/compat
+81	phc-toolkit/untyped/eval-get-values
+82	phc-toolkit/untyped/meta-struct
+82	phc-toolkit/untyped/contract
+
+
+
+cd /tmp; for m in '' phc-toolkit phc-toolkit/misc phc-toolkit/require-provide phc-toolkit/fixnum phc-toolkit/typed-rackunit phc-toolkit/typed-rackunit-extensions phc-toolkit/syntax-parse phc-toolkit/tmpl phc-toolkit/threading phc-toolkit/aliases phc-toolkit/sequence phc-toolkit/repeat-stx phc-toolkit/stx phc-toolkit/list phc-toolkit/values phc-toolkit/ids phc-toolkit/generate-indices phc-toolkit/set phc-toolkit/type-inference-helpers phc-toolkit/percent phc-toolkit/not-implemented-yet phc-toolkit/cond-let phc-toolkit/multiassoc-syntax phc-toolkit/tmpl-multiassoc-syntax phc-toolkit/logn-id phc-toolkit/compat phc-toolkit/eval-get-values phc-toolkit/meta-struct phc-toolkit/contract; do echo "#lang typed/racket/base (require $m)" > perf.rkt; echo $(((0$(for i in `seq 5`; do rm -fr compiled; t="$((time raco make perf.rkt) 2>&1)"; echo -n '+'; echo "$t" | sed -e 's/raco make perf.rkt *//' -e 's/s .*$//' -e 's/^\([0-9]*\)$/\100/' -e 's/,\([0-9]\)$/\10/' -e 's/,\([0-9][0-9]\)/\1/'; done)) / 5)) $m; done
+153	none      
+291	phc-toolkit
+167	phc-toolkit/misc
+170	phc-toolkit/require-provide
+172	phc-toolkit/fixnum
+233	phc-toolkit/typed-rackunit
+238	phc-toolkit/typed-rackunit-extensions
+175	phc-toolkit/syntax-parse
+167	phc-toolkit/tmpl
+169	phc-toolkit/threading
+172	phc-toolkit/aliases
+170	phc-toolkit/sequence
+169	phc-toolkit/repeat-stx
+178	phc-toolkit/stx
+167	phc-toolkit/list
+171	phc-toolkit/values
+243	phc-toolkit/ids
+170	phc-toolkit/generate-indices
+168	phc-toolkit/set
+198	phc-toolkit/type-inference-helpers
+173	phc-toolkit/percent
+167	phc-toolkit/not-implemented-yet
+172	phc-toolkit/cond-let
+180	phc-toolkit/multiassoc-syntax
+172	phc-toolkit/tmpl-multiassoc-syntax
+171	phc-toolkit/logn-id
+168	phc-toolkit/compat
+174	phc-toolkit/eval-get-values
+170	phc-toolkit/meta-struct
+167	phc-toolkit/contract

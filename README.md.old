@@ -1,0 +1,33 @@
+Library functions and utilities
+-------------------------------
+
+* `eval-get-values.rkt`
+
+  Wrapper for the racket `eval` function that allows the evaluation of code
+  with multiple return values in typed/racket.
+
+* `main.rkt`
+  
+  Utilities that complement racket and typed/racket's standard libraries.
+
+* `untyped-only/for-star-list-star.rkt`
+
+  A utility macro similar to `for*/list` to iterate over collections and return
+  a list of results, but which can return nested lists instead of just a flat
+  one.
+
+* `test-framework.rkt`
+  
+  Some wrappers and utilities that allow easier use of the rackunit test
+  framework from typed/racket files.
+
+* `list-lang.rkt`
+
+  Tiny programming language extension that allows constructing a list with the
+  contents of all trailing lines in the file. This makes appending data to the
+  list easy, as there is no need to remove the last closing parentheses and add
+  them back afterwards — simply appending an s-expression to the file works.
+  Alternatively, one could avoid using this language by appending an
+  instruction of the form:
+  
+      (set! list (cons item list))
