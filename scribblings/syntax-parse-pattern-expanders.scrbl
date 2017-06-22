@@ -25,7 +25,7 @@
  match any list of @racket[1]s and @racket[2]s in any order, but it complains
  that the attribute is bound twice, since both alternatives within the
  @racket[~or] are understood as separate patterns, not mutually-exclusive
- choices. On the other hand @racket[({~or {~and 1 x} {~and 2 x}} ...)] still
+ choices. On the other hand @racket[({~either {~and 1 x} {~and 2 x}} ...)] still
  matches @racket[(2 1 1 1 2 2 1)], and successfully binds all the elements to
  @racket[x ...].}
 
