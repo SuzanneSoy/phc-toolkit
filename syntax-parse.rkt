@@ -36,6 +36,7 @@
            ~with
            ~attr
            ~or-bug
+           ~rx-id
            (rename-out [~or-bug ~either])
            define-simple-macro
            ;template/loc
@@ -99,10 +100,10 @@
          (define/with-syntax name
            (format-id #'kw "~a" (keyword->string (syntax-e #'kw))))
          #`(#,base-pattern (~seq (~and name kw) pat ...)
-                               #,@(if name?
-                                      #`(#:name #,(format "the ~a keyword"
-                                                          (syntax-e #'kw)))
-                                      #'())))]))
+                           #,@(if name?
+                                  #`(#:name #,(format "the ~a keyword"
+                                                      (syntax-e #'kw)))
+                                  #'())))]))
   
   (define-syntax ~optkw
     (pattern-expander
@@ -293,4 +294,17 @@
       #:attributes (id)
       (pattern id:id)
       (pattern (:name-or-curry . curry-args))))
-  (require 'm-name-or-curry))
+  (require 'm-name-or-curry)
+
+  (define (match-id [rx : Regexp] [id : Identifier])
+    (let ([m (regexp-match rx (symbol->string (syntax-e id)))])
+      (and m (map (λ ([% : (U #f String)])
+                    (and % (datum->syntax id (string->symbol %) id id)))
+                  (cdr m)))))
+  (define-syntax ~rx-id
+    (pattern-expander
+     (λ (stx)
+       (syntax-case stx ()
+         [(_ rx . g*)
+          #'(~and x:id
+                  {~parse g* (match-id rx #'x)})])))))
