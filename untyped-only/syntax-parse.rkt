@@ -5,7 +5,17 @@
                      racket/contract
                      racket/syntax)
          syntax/parse
-         (prefix-in - syntax/parse/private/residual))
+         version-case)
+
+(version-case
+ [(version< (version) "6.90.0.24")
+  (require (prefix-in - syntax/parse/private/residual))]
+ [else
+  (require (prefix-in - racket/private/template))
+  (define-for-syntax (-attribute-mapping-syntax? x)
+    ;; attribute-mapping-check is actually false when attribute-mapping-syntax?
+    ;; would have been true (thanks rmculpepper !)
+    (not (-attribute-mapping-check x)))])
 
 (provide attribute*
          (for-syntax attribute-info)

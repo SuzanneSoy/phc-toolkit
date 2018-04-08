@@ -7,7 +7,8 @@
                "typed-racket-more"
                "reprovide-lang"
                "type-expander"
-               "hyper-literate"))
+               "hyper-literate"
+               "version-case"))
 (define build-deps '("scribble-lib"
                      "racket-doc"
                      "typed-racket-doc"
