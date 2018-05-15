@@ -11,7 +11,8 @@
  [(version< (version) "6.90.0.24")
   (require (prefix-in - syntax/parse/private/residual))]
  [else
-  (require (prefix-in - racket/private/template))
+  (require (rename-in (prefix-in - racket/private/template)
+                      [-attribute-mapping -make-attribute-mapping]))
   (define-for-syntax (-attribute-mapping-syntax? x)
     ;; attribute-mapping-check is actually false when attribute-mapping-syntax?
     ;; would have been true (thanks rmculpepper !)
