@@ -9,22 +9,22 @@
 
 (version-case
  [(version< (version) "6.90.0.24")
-  (require (prefix-in - syntax/parse/private/residual))
-  (define-for-syntax (compatibility-syntax-or-check syntax?)
-    syntax?)]
+  (require (rename-in (prefix-in - syntax/parse/private/residual)
+                      [-make-attribute-mapping
+                       compat-make-attribute-mapping]))]
  [else
   (require (rename-in (prefix-in - racket/private/template)
-                      [-attribute-mapping -make-attribute-mapping])
-           (only-in syntax/parse/private/residual ;; must be an absolute path
+                      [-attribute-mapping --make-attribute-mapping])
+           ;; must be an absolute path
+           (only-in syntax/parse/private/residual
                     check-attr-value))
   (define-for-syntax (-attribute-mapping-syntax? x)
     ;; attribute-mapping-check is actually false when attribute-mapping-syntax?
     ;; would have been true (thanks rmculpepper !)
     (not (-attribute-mapping-check x)))
-  (define-for-syntax (compatibility-syntax-or-check syntax?)
-    (if syntax?
-        #f
-        (quote-syntax check-attr-value)))])
+  (define-for-syntax (compat-make-attribute-mapping valvar name depth syntax?)
+    (--make-attribute-mapping
+     valvar name depth (if syntax? #f (quote-syntax check-attr-value))))])
 
 (provide attribute*
          (for-syntax attribute-info)
@@ -95,10 +95,10 @@
       (define valvar
         val)
       (define-syntax tmp-attr
-        (-make-attribute-mapping (quote-syntax valvar)
-                                 'name
-                                 'depth
-                                 (compatibility-syntax-or-check 'syntax?)))
+        (compat-make-attribute-mapping (quote-syntax valvar)
+                                       'name
+                                       'depth
+                                       'syntax?))
       (define-syntax name
         (make-syntax-mapping 'depth
                              (quote-syntax tmp-attr)))))
