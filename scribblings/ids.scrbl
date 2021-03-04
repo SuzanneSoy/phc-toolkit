@@ -6,7 +6,7 @@
                     phc-toolkit/ids
                     phc-toolkit/contract]]
 @title{Generating identifiers}
-@author{@author+email["Georges Dupéron" "georges.duperon@gmail.com"]}
+@author{@author+email["Suzanne Soy" "racket@suzanne.soy"]}
 @defmodule[phc-toolkit/ids
            #:use-sources
            [(submod (lib "phc-toolkit/ids.rkt") typed)]]

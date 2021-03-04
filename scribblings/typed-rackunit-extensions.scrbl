@@ -3,7 +3,7 @@
          "utils.rkt"
          @for-label[phc-toolkit/typed-rackunit-extensions]]
 @title{Extensions for @racketmodname[typed/rackunit]}
-@author{@author+email["Georges Dupéron" "georges.duperon@gmail.com"]}
+@author{@author+email["Suzanne Soy" "racket@suzanne.soy"]}
 
 @defmodule[phc-toolkit/typed-rackunit-extensions
            #:use-sources

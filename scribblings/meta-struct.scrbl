@@ -6,7 +6,7 @@
                     racket/struct-info]]
 
 @title{meta operations on structs}
-@author{@author+email["Georges Dupéron" "georges.duperon@gmail.com"]}
+@author{@author+email["Suzanne Soy" "racket@suzanne.soy"]}
 
 @section{Typed macros and procedures}
 

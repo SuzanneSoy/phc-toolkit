@@ -3,7 +3,7 @@
          "utils.rkt"
          @for-label[phc-toolkit/type-inference-helpers]]
 @title{type-inference-helpers}
-@author{@author+email["Georges Dupéron" "georges.duperon@gmail.com"]}
+@author{@author+email["Suzanne Soy" "racket@suzanne.soy"]}
 @defmodule[phc-toolkit/type-inference-helpers
            #:use-sources
            [(submod (lib "phc-toolkit/type-inference-helpers.rkt") typed)]]

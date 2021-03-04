@@ -3,7 +3,7 @@
          "utils.rkt"
          @for-label[phc-toolkit/test-framework]]
 @title{test-framework}
-@author{@author+email["Georges Dupéron" "georges.duperon@gmail.com"]}
+@author{@author+email["Suzanne Soy" "racket@suzanne.soy"]}
 @defmodule[phc-toolkit/test-framework
            #:use-sources
            [(submod (lib "phc-toolkit/test-framework.rkt") typed)]]

@@ -3,7 +3,7 @@
          "utils.rkt"
          @for-label[phc-toolkit/multiassoc-syntax]]
 @title{multiassoc-syntax}
-@author{@author+email["Georges Dupéron" "georges.duperon@gmail.com"]}
+@author{@author+email["Suzanne Soy" "racket@suzanne.soy"]}
 @defmodule[phc-toolkit/multiassoc-syntax
            #:use-sources
            [(submod (lib "phc-toolkit/multiassoc-syntax.rkt") typed)]]

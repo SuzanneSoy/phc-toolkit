@@ -3,7 +3,7 @@
          "utils.rkt"
          @for-label[phc-toolkit/not-implemented-yet]]
 @title{not-implemented-yet}
-@author{@author+email["Georges Dupéron" "georges.duperon@gmail.com"]}
+@author{@author+email["Suzanne Soy" "racket@suzanne.soy"]}
 @defmodule[phc-toolkit/not-implemented-yet
            #:use-sources
            [(submod (lib "phc-toolkit/not-implemented-yet.rkt") typed)]]

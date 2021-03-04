@@ -3,7 +3,7 @@
                     racket/base]]
 
 @title{phc-toolkit}
-@author{@author+email["Georges Dupéron" "georges.duperon@gmail.com"]}
+@author{@author+email["Suzanne Soy" "racket@suzanne.soy"]}
 
 @defmodule[phc-toolkit]
 

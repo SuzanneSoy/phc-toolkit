@@ -3,7 +3,7 @@
          "utils.rkt"
          @for-label[phc-toolkit/threading]]
 @title{threading}
-@author{@author+email["Georges Dupéron" "georges.duperon@gmail.com"]}
+@author{@author+email["Suzanne Soy" "racket@suzanne.soy"]}
 @defmodule[phc-toolkit/threading
            #:use-sources
            [(submod (lib "phc-toolkit/threading.rkt") typed)]]

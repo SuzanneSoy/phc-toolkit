@@ -3,7 +3,7 @@
          "utils.rkt"
          @for-label[phc-toolkit/sequence]]
 @title{sequence}
-@author{@author+email["Georges Dupéron" "georges.duperon@gmail.com"]}
+@author{@author+email["Suzanne Soy" "racket@suzanne.soy"]}
 @defmodule[phc-toolkit/sequence
            #:use-sources
            [(submod (lib "phc-toolkit/sequence.rkt") typed)]]

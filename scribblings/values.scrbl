@@ -3,7 +3,7 @@
          "utils.rkt"
          @for-label[phc-toolkit/values]]
 @title{values}
-@author{@author+email["Georges Dupéron" "georges.duperon@gmail.com"]}
+@author{@author+email["Suzanne Soy" "racket@suzanne.soy"]}
 @defmodule[phc-toolkit/values
            #:use-sources
            [(submod (lib "phc-toolkit/values.rkt") typed)]]

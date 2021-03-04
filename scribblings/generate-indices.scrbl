@@ -3,7 +3,7 @@
          "utils.rkt"
          @for-label[phc-toolkit/generate-indices]]
 @title{generate-indices}
-@author{@author+email["Georges Dupéron" "georges.duperon@gmail.com"]}
+@author{@author+email["Suzanne Soy" "racket@suzanne.soy"]}
 @defmodule[phc-toolkit/generate-indices
            #:use-sources
            [(submod (lib "phc-toolkit/generate-indices.rkt") typed)]]

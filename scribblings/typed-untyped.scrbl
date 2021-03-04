@@ -3,7 +3,7 @@
          "utils.rkt"
          @for-label[phc-toolkit/typed-untyped]]
 @title{typed-untyped}
-@author{@author+email["Georges Dupéron" "georges.duperon@gmail.com"]}
+@author{@author+email["Suzanne Soy" "racket@suzanne.soy"]}
 @defmodule[phc-toolkit/typed-untyped
            #:use-sources
            [(lib "phc-toolkit/typed-untyped.rkt")]]

@@ -3,7 +3,7 @@
          "utils.rkt"
          @for-label[phc-toolkit/cond-let]]
 @title{cond-let}
-@author{@author+email["Georges Dupéron" "georges.duperon@gmail.com"]}
+@author{@author+email["Suzanne Soy" "racket@suzanne.soy"]}
 @defmodule[phc-toolkit/cond-let
            #:use-sources
            [(submod (lib "phc-toolkit/cond-let.rkt") typed)]]

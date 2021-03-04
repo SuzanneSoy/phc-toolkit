@@ -3,7 +3,7 @@
          "utils.rkt"
          @for-label[phc-toolkit/in]]
 @title{in}
-@author{@author+email["Georges Dupéron" "georges.duperon@gmail.com"]}
+@author{@author+email["Suzanne Soy" "racket@suzanne.soy"]}
 @defmodule[phc-toolkit/in
            #:use-sources
            [(lib "phc-toolkit/in.rkt")]]

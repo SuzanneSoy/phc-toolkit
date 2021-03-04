@@ -12,7 +12,7 @@
    ~bind)
 
 @title{Pattern expanders}
-@author{@author+email["Georges Dupéron" "georges.duperon@gmail.com"]}
+@author{@author+email["Suzanne Soy" "racket@suzanne.soy"]}
 
 @declare-exporting[phc-toolkit/syntax-parse
                    #:use-sources

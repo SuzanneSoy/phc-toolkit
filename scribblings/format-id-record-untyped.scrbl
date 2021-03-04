@@ -11,7 +11,7 @@
                     racket/base]]
 @title[#:tag "phc-toolkit-format-id-record"]{Formatting identifiers so that
  DrRacket still shows arrows}
-@author{@author+email["Georges Dupéron" "georges.duperon@gmail.com"]}
+@author{@author+email["Suzanne Soy" "racket@suzanne.soy"]}
 @defmodule[phc-toolkit/untyped-only/format-id-record
            #:use-sources
            [(lib "phc-toolkit/untyped-only/format-id-record.rkt")]]

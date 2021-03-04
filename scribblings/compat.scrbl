@@ -3,7 +3,7 @@
          "utils.rkt"
          @for-label[phc-toolkit/compat]]
 @title{Compatibility wrappers}
-@author{@author+email["Georges Dupéron" "georges.duperon@gmail.com"]}
+@author{@author+email["Suzanne Soy" "racket@suzanne.soy"]}
 @defmodule[phc-toolkit/compat
            #:use-sources
            [(submod (lib "phc-toolkit/compat.rkt") typed)]]

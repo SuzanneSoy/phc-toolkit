@@ -19,4 +19,4 @@
 (define scribblings '(("scribblings/phc-toolkit.scrbl" (multi-page))))
 (define pkg-desc "My toolkit")
 (define version "1.1")
-(define pkg-authors '(|Georges Dupéron|))
+(define pkg-authors '(|Suzanne Soy|))

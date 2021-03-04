@@ -4,7 +4,7 @@
          @for-label[phc-toolkit/fixnum]]
 @(def-orig orig [racket/fixnum] fxxor)
 @title{Fixnum operations (fxxor …)}
-@author{@author+email["Georges Dupéron" "georges.duperon@gmail.com"]}
+@author{@author+email["Suzanne Soy" "racket@suzanne.soy"]}
 @defmodule[phc-toolkit/fixnum
            #:use-sources
            [(submod (lib "phc-toolkit/fixnum.rkt") typed)]]

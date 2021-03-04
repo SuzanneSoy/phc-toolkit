@@ -5,7 +5,7 @@
                     racket/function
                     racket/contract]]
 @title{contract}
-@author{@author+email["Georges Dupéron" "georges.duperon@gmail.com"]}
+@author{@author+email["Suzanne Soy" "racket@suzanne.soy"]}
 @defmodule[phc-toolkit/contract
            #:use-sources
            [(submod (lib "phc-toolkit/contract.rkt") typed)]]

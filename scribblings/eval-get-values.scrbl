@@ -3,7 +3,7 @@
          "utils.rkt"
          @for-label[phc-toolkit/eval-get-values]]
 @title{eval-get-values}
-@author{@author+email["Georges Dupéron" "georges.duperon@gmail.com"]}
+@author{@author+email["Suzanne Soy" "racket@suzanne.soy"]}
 @defmodule[phc-toolkit/eval-get-values
            #:use-sources
            [(submod (lib "phc-toolkit/eval-get-values.rkt") typed)]]

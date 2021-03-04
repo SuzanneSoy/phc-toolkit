@@ -3,7 +3,7 @@
          "utils.rkt"
          @for-label[phc-toolkit/logn-id]]
 @title{logn-id}
-@author{@author+email["Georges Dupéron" "georges.duperon@gmail.com"]}
+@author{@author+email["Suzanne Soy" "racket@suzanne.soy"]}
 @defmodule[phc-toolkit/logn-id
            #:use-sources
            [(submod (lib "phc-toolkit/logn-id.rkt") typed)]]
