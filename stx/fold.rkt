@@ -28,9 +28,9 @@
       [(hash? stx)
        (define processed (process (hash->list stx)))
        (cond
-         [(hash-equal? stx) (hash processed)]
-         [(hash-eqv? stx) (hasheqv processed)]
-         [(hash-eq? stx) (hasheq processed)])]
+         [(hash-equal? stx) (make-hash processed)]
+         [(hash-eqv? stx) (make-hasheqv processed)]
+         [(hash-eq? stx) (make-hasheq processed)])]
       [(prefab-struct-key stx)
        (apply make-prefab-struct
               (prefab-struct-key stx)
